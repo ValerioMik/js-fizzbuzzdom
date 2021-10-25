@@ -8,20 +8,25 @@ Lo facciamo ricreandolo nel layout dato in screeshot (affrontandolo come meglio 
 
 /*  facciamo in modo che il computer stampi i numeri da 1 a 100 */
 /*troviamo il modo di calcolarci  i multipli di 3 e 5 */
+const squareCont = document.getElementById("containersquare");
+
 
 for (let i = 1; i < 101; i++) {
     if (i % 15 == 0){
-     
+    squareCont.innerHTML += `<div class="squarefizzbuzz">FizBuz</div>`;
 
     }else if(i % 5 == 0){
-        console.log('buz')
+        squareCont.innerHTML += `<div class="squarebuzz">Buz</div>`;
 
     }else if (i % 3 ==0){
 
-        console.log('fizz')
+        squareCont.innerHTML += `<div class="squarefizz">Fiz</div>`;
+        ;
     }else{
-        console.log(i)
+        squareCont.innerHTML += `<div class="square">${i}</div>`;;
     }
+
+}
 /* stampiamo un consol log di verifica */
 
 /* creiamo un codice html di della pagina  */
@@ -29,5 +34,4 @@ for (let i = 1; i < 101; i++) {
 /*  creiamo lo stile dei quattro quadrati  */
 
 /* appendiamo l'elemento html con lo stile d ogni quadrato */
-
 
